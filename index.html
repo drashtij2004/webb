@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Parvu ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* HEARTS */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 14px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 0.7; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+.container {
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  text-align: left;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* IMAGE (NOW TOP) */
+img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  margin: 25px auto;
+  border: 2px solid white;
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>I'm Sorry Parvu ❤️</h1>
+  <div class="subtitle">a message from my heart</div>
+
+  <!-- IMAGE MOVED TO TOP -->
+  <img src="your-image.jpg" alt="memory">
+
+  <div class="card">
+
+    <p>
+      I'm sorry Parvu for what I did and what I said. I miss you every day.  
+      Mai tujhe bahut yaad karti hu aur kabhi kabhi roti hu. Tune bola tha tu kabhi change nahi hoga par shayad kuch cheezein badal gayi.
+    </p>
+
+    <p>
+      I miss you every day, every second of my life. I still remember the sweet boy I met — the Niagara date, the Valentine beach date, and the night you came to see me.  
+      If I knew that was going to be the last time, I would have never let you go, Parvu. I can’t explain how much I love you.
+    </p>
+
+    <p>
+      I miss the way you laughed while teasing me. I miss your soft voice when you talked to me. I miss how you quietly listened to everything I said. I truly regret how things went between us.
+    </p>
+
+    <p>
+      I know I made mistakes. I get emotional sometimes because I miss you too much. Everything changed so quickly in these days. Pattu, I will always care about you.
+    </p>
+
+    <p>
+      You matter a lot to me. I still carry a lot of feelings for you, and I hope one day we can talk again and start fresh, peacefully and happily.
+    </p>
+
+    <p>
+      Love you Parvu, chotu, mere kallu. I hope we can find our way back to a better place.
+    </p>
+
+    <div class="footer">
+      made with love ❤️
+    </div>
+
+  </div>
+</div>
+
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+
+  const emojis = ["❤️", "💙"];
+  heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+  heart.style.left = Math.random() * window.innerWidth + "px";
+  heart.style.fontSize = (10 + Math.random() * 8) + "px";
+  heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 7000);
+}
+
+setInterval(createHeart, 1200);
+</script>
+
+</body>
+</html>
